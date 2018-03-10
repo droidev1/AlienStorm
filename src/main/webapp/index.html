@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Storm</title>
+</head>
+<body>
+
+<div id="start-form">
+    <h1>Alien Storm</h1>
+
+    <p>Your name: <input id="player-name" name="player-name" type="text" maxlength="8" title="Your name"/>
+        <!--value="Ed"-->
+    </p>
+
+    <fieldset class="colors-fieldset">
+        <legend>Choose color</legend>
+        <label class="orange">
+            <input type="radio" name="color" value="orange">  <!--checked-->
+            <span class="color-button"><span></span></span>
+        </label>
+        <label class="amber">
+            <input type="radio" name="color" value="amber"> <!--disabled-->
+            <span class="color-button"><span class="name-container"></span></span>
+        </label>
+        <label class="lime">
+            <input type="radio" name="color" value="lime">
+            <span class="color-button"><span></span></span>
+        </label>
+        <label class="teal">
+            <input type="radio" name="color" value="teal">
+            <span class="color-button"><span></span></span>
+        </label>
+        <label class="blue">
+            <input type="radio" name="color" value="blue">
+            <span class="color-button"><span></span></span>
+        </label>
+        <label class="purple">
+            <input type="radio" name="color" value="purple">
+            <span class="color-button"><span></span></span>
+        </label>
+    </fieldset>
+
+    <p>
+        <button class="play-button" onclick="app.startGame()">Play!</button>
+    </p>
+
+</div>
+
+<canvas id="canvas" width="100%" height="100%">
+    Canvas technology required for this app to run is not supported in this browser
+</canvas>
+
+<script src="js/lib/pixi.min.js"></script>
+<script src="js/lib/sound.js"></script>
+<script src="js/alienStorm.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/msgManager.js"></script>
+<script src="js/gameScene.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        app.setup();
+    });
+</script>
+</body>
+</html>
